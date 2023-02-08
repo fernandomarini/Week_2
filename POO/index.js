@@ -1,8 +1,5 @@
 let myLib = require ("./person");
 
-// MODIFI ESTE FICHERO PARA USAR PERSON.JS
-
-
 let fernando = new Person("Fernando Ariel","Marini Scrizzi", 13586852);
 
 console.log(fernando); // Verifico fernando

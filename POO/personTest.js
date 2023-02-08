@@ -1,71 +1,33 @@
-class Person{
+let myLib = require("./person")
 
-    constructor(nom,ape,dni){
-        this.nombres = nom
-        this.apellidos = ape
-        this.edad
-        this.aNac
-        this.nomPadre 
-        this.nomMadre
-        this.hermanos
-        this.hijos
-        this.dni = dni
-        this.altura
-        this.peso
-        this.pelo
-        this.ojos
-        this.ocupacion
-        this.nivelEd
-        this.hobbies = []
-    };
+let camila = new myLib.Person("Camila Alejandra","Marini Dominguez", 12541236);
 
-    //Metodos
+console.log(camila);
 
-    calcIMC(){
-        let imc = 0;
-        imc = (this.peso / (this.altura * this.altura)).toFixed(2);
-        return "El IMC es : " + imc
-    };
-   
-    calcEdad(year){
-        let edad = year - this.aNac
-        return "La edad es : " + edad
-    };
+camila.peso = 45;
+camila.altura = 1.50;
 
-    printAll(){ 
-        console.log("El atriburo es: nombres y el valor es : "+ this.nombres);    
-        console.log("El atriburo es: apellidos y el valor es : "+ this.apellidos);  
-        console.log("El atriburo es: edad y el valor es : "+ this.edad);  
-        console.log("El atriburo es: año de nacimiento y el valor es : "+ this.aNac);             
-        console.log("El atriburo es: nombre del Padre y el valor es : "+ this.nomPadre);  
-        console.log("El atriburo es: nombre de la Madre y el valor es : "+ this.nomMadre);  
-        console.log("El atriburo es: hermanos y el valor es : "+ this.hermanos);  
-        console.log("El atriburo es: hijos y el valor es : "+ this.hijos);  
-        console.log("El atriburo es: dni y el valor es : "+ this.dni);  
-        console.log("El atriburo es: altuna y el valor es : "+ this.altura);  
-        console.log("El atriburo es: peso y el valor es : "+ this.peso);  
-        console.log("El atriburo es: pelo y el valor es : "+ this.pelo);  
-        console.log("El atriburo es: ojos y el valor es : "+ this.ojos);  
-        console.log("El atriburo es: ocupacion y el valor es : "+ this.ocupacion);  
-        console.log("El atriburo es: nivel de educacion y el valor es : "+ this.nivelEd);  
-        console.log("El atriburo es: hobbies y el valor es : "+ this.hobbies);          
-    };                       //  No me gusta, pero no encontre un for que funcione correctamente.
+console.log(camila); // Verifico Peso y Altura
+
+console.log(camila.calcIMC());
 
 
-    printHobbies(){
-        for ( let i = 0 ; i < this.hobbies.length ; i++ ) {
-            console.log(this.hobbies[i])
-        };
-    };
+// ******** RETO 3 ***********
+
+camila.aNac = 2001;
+
+console.log(camila.calcEdad(2023));
 
 
+// ******** RETO 4 ***********
 
-}; // Fin Clase Person
+camila.printAll();
 
 
+// ******** RETO 5 ***********
 
-let maxi = new Person("Maximiliano","Lopez Perez",15689542);
+camila.hobbies = ["leer", "trekking"];
 
-module.exports = {Person}
+console.log(camila); // Verifico hobbies
 
-console.log(maxi);
+camila.printHobbies();
