@@ -59,9 +59,7 @@ class Person{
     };
 
 
-
 }; // Fin Clase Person
-
 
 
 module.exports = {Person}

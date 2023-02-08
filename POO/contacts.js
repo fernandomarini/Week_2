@@ -1,18 +1,20 @@
+let myLib = require("./person")
+
+
 class Contacts{
 
     constructor(){
-        this.person = [];
-
-
+        this.contactos = [];
     };
 
     printPersons(){
-        for ( let i = 0 ; i < this.person.length ; i++ ) {
-            console.log(this.person[i])
+        for ( let i = 0 ; i < this.contactos.length ; i++ ) {
+            console.log(this.contactos[i])
         };
     };
-
 };
+
+
 
 
 

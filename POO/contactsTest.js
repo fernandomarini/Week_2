@@ -1,8 +1,23 @@
-let myLib = require("./contacts");
+let myLib2 = require("./contacts");
+let myLib = require("./person")
 
 
-let fer = new myLib.Contacts();
 
-fer.person = [1,2,3,5,4];
 
-fer.printPersons();
+let agenda = new myLib2.Contacts()
+
+console.log(agenda);
+
+let pepe = new myLib.Person("fer","fer",543);
+let gat = new myLib.Person("bds","grt",1351);
+
+agenda.contactos = [{pepe}, {gat}];
+
+console.log(agenda);
+
+agenda.printPersons();
+
+
+
+
+
