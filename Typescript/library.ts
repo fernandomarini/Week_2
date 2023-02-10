@@ -36,15 +36,12 @@ class Library {
         return this.manager;
     };
 
-    public toString():void{
+    public toStringL():string{
+        let cadena: string = "";
             for( let i = 0 ; i < this.books.length ; i++){
-                  console.log(`" BooK "  \n
-            Title - ${this.books[i].getTitle()} \n
-            Number of page - ${this.books[i].getNPages()} \n
-            ISBN - ${this.books[i].getIsbn()} \n
-            Authos - ${this.books[i].getAuthor()} \n
-            Editorial - ${this.books[i].getEditorial()} "`);
-            };        
+                  cadena += (`BOOK ${i+1} \n${this.books[i].toString()}`);
+            };    
+            return cadena;    
     };
     
     public getNumberOfBooks(): number {
@@ -63,7 +60,6 @@ class Library {
     };
 
 };
-
 
 
 

@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var vector_1 = require("./vector");
+var arr1 = new vector_1.Vector(10, 50);
+var arr2 = new vector_1.Vector(10, 100);
+arr1.print();
+arr2.print();
+console.log(arr1.add(arr2));
+console.log(arr1.subs(arr2));
+console.log(arr1.mult(arr2));
+console.log(arr1.multNumber(2));

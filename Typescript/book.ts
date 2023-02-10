@@ -51,16 +51,18 @@ class Book{
         return this.editorial;
     };
 
-    public toString():void{
-        console.log(`"  Title - ${this.title} \n
+    public toString():string{
+        let cadena: string = "";
+        cadena =(`"  Title - ${this.title} \n
     Number of page - ${this.nPages} \n
     ISBN - ${this.isbn} \n
     Authos - ${this.author} \n
-    Editorial - ${this.editorial} "`);
+    Editorial - ${this.editorial} "\n`);     
+       return cadena;
+
     };
 
 };
-
 
 
 
