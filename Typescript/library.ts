@@ -38,7 +38,8 @@ class Library {
 
     public toString():void{
             for( let i = 0 ; i < this.books.length ; i++){
-                  console.log(`"  Title - ${this.books[i].getTitle()} \n
+                  console.log(`" BooK "  \n
+            Title - ${this.books[i].getTitle()} \n
             Number of page - ${this.books[i].getNPages()} \n
             ISBN - ${this.books[i].getIsbn()} \n
             Authos - ${this.books[i].getAuthor()} \n
