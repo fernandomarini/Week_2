@@ -26,14 +26,30 @@ class Vector{
         return arrSumado;
     };
 
+    public subs( v1: Vector ): Vector{
+        let arrRestado: Vector = new Vector(0,0);
+        for( let i = 0 ; i < this.elements.length ; i++ ){
+        arrRestado.elements.push(this.elements[i] - v1.elements[i]); 
+        };
+        return arrRestado;
+    };
+
+    public mult( v1: Vector ): Vector{
+        let arrMult: Vector = new Vector(0,0);
+        for( let i = 0 ; i < this.elements.length ; i++ ){
+        arrMult.elements.push(this.elements[i] * v1.elements[i]); 
+        };
+        return arrMult;
+    };
+
+    public multNumber( n: number ): Vector{
+        let arrMultNumero: Vector = new Vector(0,0);
+        for( let i = 0 ; i < this.elements.length ; i++ ){
+        arrMultNumero.elements.push(this.elements[i] * n); 
+        };
+        return arrMultNumero;
+    };
 
 };
 
-let arr1 = new Vector(10,50);
-let arr2 = new Vector(10,100);
-
-
-arr1.print();
-arr2.print();
-
-console.log(arr1.add(arr2));
+export {Vector}
