@@ -49,13 +49,13 @@ class Library {
     };
 
     public findByAuthor ( autor:string): Book[] {
-        let LibrosAutor: Book[] = [];
+        let librosAutor: Book[] = [];
         for ( let i = 0 ; i < this.books.length ; i++){
             if( this.books[i].getAuthor() == autor ){
-                LibrosAutor.push( this.books[i] ); 
+                librosAutor.push( this.books[i] ); 
             };
         };
-        return LibrosAutor;
+        return librosAutor;
 
     };
 
